@@ -1,0 +1,6 @@
+<launch>
+  <node name="turtlesim1" pkg="turtlesim" type="turtlesim_node"/>
+  
+  
+  <node name="mypackage" pkg="mypackage" type="cppfile_node"/>
+</launch>
