@@ -15,22 +15,22 @@ int main(int argc, char **argv)
 
    ros::Rate loop_rate(1);
 
-   geometry_msgs::Twist vel_msg;
+   geometry_msgs::Twist msg;
     
-   vel_msg.linear.x=10;
-   vel_msg.linear.y=0;
-   vel_msg.linear.z=0;
+   msg.linear.x=10;
+   msg.linear.y=0;
+   msg.linear.z=0;
 
-  vel_msg.angular.x=0;
-  vel_msg.angular.y=0;
-  vel_msg.angular.z= 3.28;
+  msg.angular.x=0;
+  msg.angular.y=0;
+  msg.angular.z= 3.28;
 
    loop_rate.sleep();
-   infinity_turtle.publish(vel_msg);
+   infinity_turtle.publish(msg);
 
-   vel_msg.angular.z=-3.28;
+   msg.angular.z=-3.28;
    loop_rate.sleep();
-   infinity_turtle.publish(vel_msg);
+   infinity_turtle.publish(msg);
 
    ros::spin();
 
